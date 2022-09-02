@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,600&display=swap');
+
+:root {
+    --main-color: rgb(159, 159, 248);
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    --box-shadow-hover: inset 0 -5px 0 0 rgb(0, 0, 0);
+    --text-shadow: 2px 2px var(--main-color);
+}
+
+* {
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    color: white;
+    overflow: auto;
+    background-color: black;
+    text-align: center;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+    width: 0.6rem;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: white;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+}
+
+h1 {
+    text-shadow: 2px 2px 5px lightskyblue;
+}
+
+button {
+    background-color: var(--main-color);
+    border: 1px solid white;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+nav button {
+    width: 18%;
+}
+
+div button {
+    padding: 2px 5px;
+    font-size: 20px;
+    width: 150px;
+}
+
+button:hover {
+    background-color: darkslateblue;
+    box-shadow: var(--box-shadow-hover);
+}
+
+img {
+    width: 100%;
+    height: auto;
+    margin-top: 5px;
+    padding: 2px;
+    display: none;
+}
+
+div {
+    border: 1px solid white;
+    margin-top: 20px;
+}
+
+#problem {
+    margin: auto;
+    height: auto;
+    color: var(--main-color);
+    font-size: 15px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: 90vw;
+    margin-top: 20px;
+}
+
+[class*="column"] {
+    width: 100%;
+    display: inline-block;
+    height: 60vh;
+}
+
+[id*="checkbox"] {
+    margin-top: 1rem;
+}
+
+@media(min-width:900px) {
+    [class*="column"] {
+        width: 32%;
+    }
+
+    nav button {
+        width: 9%;
+        font-size: 1.2vw;
+    }
+}
