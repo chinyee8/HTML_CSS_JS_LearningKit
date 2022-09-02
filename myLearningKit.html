@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>myLearningKit</title>
+    <link rel="stylesheet" type="text/css" href="style.css" title="style" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <!--header-->
+    <h1>My Computational Thinking Kit</h1>
+
+    <!--Navigation bar-->
+    <nav>
+      <button onclick="p01Func()">Problem01</button>
+      <button onclick="p02Func()">Problem02</button>
+      <button onclick="p03Func()">Problem03</button>
+      <button onclick="p04Func()">Problem04</button>
+      <button onclick="p05Func()">Problem05</button>
+      <button onclick="p06Func()">Problem06</button>
+      <button onclick="p07Func()">Problem07</button>
+      <button onclick="p08Func()">Problem08</button>
+      <button onclick="p09Func()">Problem09</button>
+      <button onclick="p10Func()">Problem10</button>
+      <button onclick="p11Func()">Problem11</button>
+      <button onclick="p12Func()">Problem12</button>
+      <button onclick="p13Func()">Problem13</button>
+      <button onclick="p14Func()">Problem14</button>
+      <button onclick="p15Func()">Problem15</button>
+      <button onclick="p16Func()">Problem16</button>
+      <button onclick="p17Func()">Problem17</button>
+      <button onclick="p18Func()">Problem18</button>
+      <button onclick="p19Func()">Problem19</button>
+      <button onclick="p20Func()">Problem20</button>
+      <button onclick="p21Func()">Problem21</button>
+      <button onclick="p22Func()">Problem22</button>
+      <button onclick="p23Func()">Problem23</button>
+      <button onclick="p24Func()">Problem24</button>
+      <button onclick="p25Func()">Problem25</button>
+      <button onclick="p26Func()">Problem26</button>
+      <button onclick="p27Func()">Problem27</button>
+      <button onclick="p28Func()">Problem28</button>
+      <button onclick="p29Func()">Problem29</button>
+      <button onclick="p30Func()">Problem30</button>
+      <button onclick="p31Func()">Problem31</button>
+      <button onclick="p32Func()">Problem32</button>
+      <button onclick="p33Func()">Problem33</button>
+      <button onclick="p34Func()">Problem34</button>
+      <button onclick="p35Func()">Problem35</button>
+      <button onclick="p36Func()">Problem36</button>
+      <button onclick="p37Func()">Problem37</button>
+      <button onclick="p38Func()">Problem38</button>
+      <button onclick="p39Func()">Problem39</button>
+      <button onclick="p40Func()">Problem40</button>
+    </nav>
+
+    <!--Problem description-->
+    <div id="problem"></div>
+
+    <!--Flowchart section-->
+    <div class="column_flowchart">
+      <input
+        id="checkbox-flowchart"
+        type="checkbox"
+        onclick="checkUncheck1()"
+      />
+      Flowchart
+      <img
+        id="flowchart"
+        src="null"
+        alt="null"
+        onclick="zoomOut()"
+        ondblclick="zoomIn()"
+      />
+    </div>
+
+    <!--JavaScript Solution section-->
+    <div class="column_javascript">
+      <input
+        id="checkbox-javascript"
+        type="checkbox"
+        onclick="checkUncheck2()"
+      />
+      JavaScript Solution
+      <img
+        id="javascript"
+        src="null"
+        alt="null"
+        onclick="zoomOut()"
+        ondblclick="zoomIn()"
+      />
+      <br />
+      <button id="js-answer">Answer!</button>
+    </div>
+
+    <!--Java Solution section-->
+    <div class="column_java">
+      <input id="checkbox-java" type="checkbox" onclick="checkUncheck3()" />
+      Java Solution
+      <img
+        id="java"
+        src="null"
+        alt="null"
+        onclick="zoomOut()"
+        ondblclick="zoomIn()"
+      />
+    </div>
+
+    <footer>(c) Author of this web page: <span>chinyee8</span></footer>
+  </body>
+</html>
