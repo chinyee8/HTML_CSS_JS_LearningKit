@@ -582,6 +582,190 @@ function p20Func() {
     setCheckbox();
 }
 
+function p21Func() {
+    document.getElementById("problem").innerHTML = "<p>In the main algorithm, a number is received. All the prime numbers lesser than the number inputted and has a digit 7 in it are outputted. Sub-algorithm 'prime(num)' is created to return 'true' if the number inputted from main algorithm is a prime number, otherwise return 'false'. Sub-algorithm 'has7(num)' is created to return 'true' if the number inputted has at least one digit 7, otherwise return 'false'</p>";
+
+    setFlowchart("Flowchart/Problem21.jpg");
+
+    setJs("JavaScriptSolution/Problem21.jpg");
+    document.getElementById("js-answer").onclick = function () {
+        var num = parseInt(prompt("Please input a number: ", ""));
+        var outputObj = [""];
+
+        for (i = 2; i <= num; i = i + 1) {
+            if (prime(i) == true) {
+                if (has7(i) == true) {
+                    outputObj.push(i);
+                }
+            }
+        }
+
+        alert("Prime numbers that contain digit 7: " + outputObj);
+    }
+
+    setJava(".jpg");
+
+    setCheckbox();
+}
+
+function p22Func() {
+    document.getElementById("problem").innerHTML = "<p>Receive a number as the number of digits of an octal number with base 8. Then input all digits of the octal number and convert it to decimal number. Decimal number is outputted.</p>";
+
+    setFlowchart("Flowchart/Problem22.jpg");
+
+    setJs("JavaScriptSolution/Problem22.jpg");
+    document.getElementById("js-answer").onclick = function () {
+        var n = parseInt(prompt("total numbers you want to input: ", ""));
+
+        var count = n - 1;
+        var sum = 0;
+        var decimal;
+
+        do {
+            var num = parseInt(prompt("please input number: ", ""));
+
+            decimal = num * (Math.pow(8, count));
+
+            sum = sum + decimal;
+            count = count - 1;
+
+        } while (count >= 0);
+
+        alert("Decimal is: " + sum);
+    }
+
+    setJava(".jpg");
+
+    setCheckbox();
+}
+
+function p23Func() {
+    document.getElementById("problem").innerHTML = "<p>Receive numbers in a do-while loop and output maximum number of consective 1s. If the number inputted is equal to 0, then the do-while loop will end..</p>";
+
+    setFlowchart("Flowchart/Problem23.jpg");
+
+    setJs("JavaScriptSolution/Problem23.jpg");
+    document.getElementById("js-answer").onclick = function () {
+        var cnt = 0;
+        var maxCount = 0;
+
+        do {
+            var num = parseInt(prompt("Please input a number: ", ""));
+
+            if (num == 1) {
+                cnt = cnt + 1;
+            } else {
+                if (cnt > maxCount) {
+                    maxCount = cnt;
+                }
+                cnt = 0;
+            }
+
+        } while (num != 0);
+
+        alert("max 1s: " + maxCount);
+    }
+
+    setJava(".jpg");
+
+    setCheckbox();
+}
+
+function p24Func() {
+    document.getElementById("problem").innerHTML = "<p>Receive a number and the sum of the numbers from 1 to the number received is outputted.</p>";
+
+    setFlowchart("Flowchart/Problem24.jpg");
+
+    setJs("JavaScriptSolution/Problem24.jpg");
+    document.getElementById("js-answer").onclick = function () {
+        var num = parseInt(prompt("Please input number: ", ""));
+        var sum = 0;
+
+        for (i = 1; i <= num; i++) {
+            sum = sum + i;
+
+        }
+
+        alert("sum = " + sum);
+    }
+
+    setJava(".jpg");
+
+    setCheckbox();
+}
+
+function p25Func() {
+    document.getElementById("problem").innerHTML = "<p>Receive a number and store it into the array a[i]. If the number inputted is even number, then it will be added to the sum. If i in the for loop is more than 10, the for loop will stop. List of number inputted and sum of even numbers are outputted.</p>";
+
+    setFlowchart("Flowchart/Problem25.jpg");
+
+    setJs("JavaScriptSolution/Problem25.jpg");
+    document.getElementById("js-answer").onclick = function () {
+        var sum = 0;
+        var a = [];
+
+        for (i = 0; i <= 10; i++) {
+            var num = parseInt(prompt("Please input number: ", ""));
+
+            a[i] = num;
+
+            if (num % 2 == 0) {
+                sum = sum + num;
+            }
+        }
+
+        alert("number inputted = " + a.join(" , ") + "\r\n" + "sum of even numbers = " + sum);
+
+    }
+
+    setJava(".jpg");
+
+    setCheckbox();
+}
+
+function p26Func() {
+    document.getElementById("problem").innerHTML = "<p>Receive a number while in the for loop. If the number is an odd number, it will be assigned to the array and outputted, and it will be added to the sum. If i in the for loop is more than 10, the for loop will stop. Sum of odd numbers will be outputted.</p>";
+
+    setFlowchart("Flowchart/Problem26.jpg");
+
+    setJs("JavaScriptSolution/Problem26.jpg");
+    document.getElementById("js-answer").onclick = function () {
+        var sum = 0;
+        var a = [""];
+
+        for (i = 1; i <= 10; i++) {
+            var num = parseInt(prompt("Please input number: ", ""));
+
+            if (num % 2 != 0) {
+                a.push(num);
+                sum = sum + num;
+            }
+        }
+
+        alert("sum of odd numbers = " + sum);
+    }
+
+    setJava(".jpg");
+
+    setCheckbox();
+}
+
+
+function has7(num) {
+    var seven = true;
+    var count = 0;
+    while (num > 0) {
+        if (num % 10 == 7) {
+            count += 1;
+        }
+        num = num / 10;
+    }
+    if (count == 0) {
+        seven = false
+    }
+    return seven;
+}
+
 function setFlowchart(src) {
     document.getElementById("flowchart").setAttribute("src", src);
     document.getElementById("flowchart").style.display = "none";
