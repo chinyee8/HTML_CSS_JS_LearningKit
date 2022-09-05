@@ -853,6 +853,356 @@ function p30Func() {
     setCheckbox();
 }
 
+function p31Func() {
+    document.getElementById("problem").innerHTML = "<p>An input is received and remainder by mod of and the largest integer less than or equal to the (a/10) is found. The do while loop proceeds if a is not equal to 0. Remainder that is equal to 7 is counted and outputted.</p>";
+
+    setFlowchart("Flowchart/Problem31.jpg");
+
+    setJs("JavaScriptSolution/Problem31.jpg");
+    document.getElementById("js-answer").onclick = function () {
+        var count = 0;
+
+        do {
+            var a = parseInt(prompt("Please input a number: ", ""));
+
+            r = a % 10;
+            a = Math.floor(a / 10);
+
+            if (r == 7) {
+                count = count + 1;
+            }
+
+        } while (a != 0);
+
+        alert(count);
+    }
+
+    setJava(".jpg");
+
+    setCheckbox();
+}
+
+function p32Func() {
+    document.getElementById("problem").innerHTML = "<p>Input 2 numbers where the first number is lesser than the second number. All the power of 2 between those two numbers will be outputted.</p>";
+
+    setFlowchart("Flowchart/Problem32.jpg");
+
+    setJs("JavaScriptSolution/Problem32.jpg");
+    document.getElementById("js-answer").onclick = function () {
+        var num1 = parseInt(prompt("Please input number: ", ""));
+        var num2 = parseInt(prompt("Please input number: ", ""));
+
+        var pos = 0;
+        var a = [];
+        var x = "";
+
+        for (i = num1; i <= num2; i = i + 1) {
+            if (power2(i) == true) {
+                a[pos] = i;
+                pos = pos + 1;
+
+                x = a.join(",");
+            }
+
+        }
+
+        alert("Power of 2: " + x);
+    }
+
+    setJava(".jpg");
+
+    setCheckbox();
+}
+
+function p33Func() {
+    document.getElementById("problem").innerHTML = "<p>Input a string. The reverse of the string will be outputted recursively.</p>";
+
+    setFlowchart("Flowchart/Problem33.jpg");
+
+    setJs("JavaScriptSolution/Problem33.jpg");
+    document.getElementById("js-answer").onclick = function () {
+        var word = prompt("Please input string: ", "");
+
+        var recursion = reverse(word);
+
+        alert(recursion);
+    }
+
+    setJava(".jpg");
+
+    setCheckbox();
+}
+
+function p34Func() {
+    document.getElementById("problem").innerHTML = "<p>Input a number. The total number of 7s from the input will be outputted recursively.</p>";
+
+    setFlowchart("Flowchart/Problem34.jpg");
+
+    setJs("JavaScriptSolution/Problem34.jpg");
+    document.getElementById("js-answer").onclick = function () {
+        var num = parseInt(prompt("Please input number: ", ""));
+
+        var recursion = howMany7(num);
+
+        alert(recursion);
+    }
+
+    setJava(".jpg");
+
+    setCheckbox();
+}
+
+function p35Func() {
+    document.getElementById("problem").innerHTML = "<p>Input two numbers. The multiplication of the two numbers is outputted recursively.</p>";
+
+    setFlowchart("Flowchart/Problem35.jpg");
+
+    setJs("JavaScriptSolution/Problem35.jpg");
+    document.getElementById("js-answer").onclick = function () {
+        var num1 = parseInt(prompt("Please input number: ", ""));
+        var num2 = parseInt(prompt("Please input number: ", ""));
+
+
+        var recursion = multiply(num1, num2);
+
+        alert(recursion);
+    }
+
+    setJava(".jpg");
+
+    setCheckbox();
+}
+
+function p36Func() {
+    document.getElementById("problem").innerHTML = "<p>Input a number to be searched in the array list. If the input is found in the array list, true is outputted otherwise no is outputted.</p>";
+
+    setFlowchart("Flowchart/Problem36.jpg");
+
+    setJs("JavaScriptSolution/Problem36.jpg");
+    document.getElementById("js-answer").onclick = function () {
+        var num = parseInt(prompt("Please input number: ", ""));
+
+        var arrList = [8, 9, 9, 12, 13, 13, 13, 15, 20, 100, 100, 101, 123, 129, 300, 1000, 5001, 20000, 20000, 34511];
+
+        var a = 0;
+        var b = arrList.length - 1;
+
+        if (find(num, arrList, a, b) == true) {
+            alert("true");
+        } else {
+            alert("no");
+        }
+    }
+
+    setJava(".jpg");
+
+    setCheckbox();
+}
+
+function p37Func() {
+    document.getElementById("problem").innerHTML = "<p>Input a number. The factorial of the input is outputted recursively.</p>";
+
+    setFlowchart("Flowchart/Problem37.jpg");
+
+    setJs("JavaScriptSolution/Problem37.jpg");
+    document.getElementById("js-answer").onclick = function () {
+        var num = parseInt(prompt("Please input number: ", ""));
+
+        var recursion = factorial(num);
+
+        alert(recursion);
+    }
+
+    setJava(".jpg");
+
+    setCheckbox();
+}
+
+function p38Func() {
+    document.getElementById("problem").innerHTML = "<p>Input a number. The fibonacci of the input is outputted recursively.</p>";
+
+    setFlowchart("Flowchart/Problem38.jpg");
+
+    setJs("JavaScriptSolution/Problem38.jpg");
+    document.getElementById("js-answer").onclick = function () {
+        var num = parseInt(prompt("Please input number: ", ""));
+
+        var recursion = fib(num);
+
+        alert(recursion);
+    }
+
+    setJava(".jpg");
+
+    setCheckbox();
+}
+
+function p39Func() {
+    document.getElementById("problem").innerHTML = "<p>There is an array containing a mixture of numbers and arrays. Maximum number in the array list is outputted recursively.</p>";
+
+    setFlowchart("Flowchart/Problem39.jpg");
+
+    setJs("JavaScriptSolution/Problem39.jpg");
+    document.getElementById("js-answer").onclick = function () {
+        var myList = [3, 4, 5, [2, [3, 200, 1], 4], [12, 4, [2, 800, 16]]];
+        var largestnum = max_list(myList);
+
+        alert(largestnum);
+    }
+
+    setJava(".jpg");
+
+    setCheckbox();
+}
+
+function p40Func() {
+    document.getElementById("problem").innerHTML = "<p>Input a number. The sigma of the inputted number is outputted recursively.</p>";
+
+    setFlowchart("Flowchart/Problem40.jpg");
+
+    setJs("JavaScriptSolution/Problem40.jpg");
+    document.getElementById("js-answer").onclick = function () {
+        var num = parseInt(prompt("Please input number: ", ""));
+
+        var recursion = sigma(num);
+
+        alert(recursion);
+    }
+
+    setJava(".jpg");
+
+    setCheckbox();
+}
+
+/**********************************
+    extra function
+***********************************/
+
+function sigma(n) {
+    if (n <= 1) {
+        return n;
+    } else {
+        return n + sigma(n - 1);
+    }
+}
+
+function max_list(a) {
+    if (typeof a == "number")
+        return a;
+    else {
+        var flatArr = [];
+        for (var i = 0; i < a.length; i++) {
+            flatArr.push(max_list(a[i]));
+            return Math.max(...flatArr);
+        }
+    }
+}
+
+function fib(n) {
+    if (n < 2) {
+        return n
+    } else {
+        return fib(n - 1) + fib(n - 2);
+    }
+}
+
+function factorial(x) {
+    if (x == 0) {
+        return 1;
+    } else {
+        return x * factorial(x - 1);
+    }
+}
+
+function find(x, A, i, j) {
+
+    var mid = Math.floor((i + j) / 2);
+
+    if (j > i) {
+
+        if (x == A[mid]) {
+            return true;
+        }
+
+        if (x < A[mid]) {
+            return find(x, A, i, mid);
+        }
+
+        if (x > A[mid]) {
+            return find(x, A, mid + 1, j);
+        }
+
+    } else {
+        return false;
+    }
+
+}
+
+function multiply(m, n) {
+
+    if (n == 0) {
+        return 0;
+
+    } else if (n == 1) {
+        return m;
+
+    } else {
+
+        return multiply(m, n - 1) + m;
+    }
+
+}
+
+function howMany7(n) {
+    //pre: n >= 0
+    //post: returns number of 7s in the input
+
+    var newN = 0;
+    var count = 0;
+
+    if (n == 0) {
+        return 0;
+    } else {
+
+        count = n % 10;
+        newN = parseInt(n / 10);
+
+
+        if (count == 7) {
+            return 1 + howMany7(newN);
+
+        } else {
+            return howMany7(newN);
+        }
+
+    }
+}
+
+function reverse(s) {
+    //pre: length of s > 2
+    //post: returns the reverse of the string
+
+    if (s.length < 2) {
+        return s;
+    } else {
+        var newString = s.substring(1);
+        return reverse(newString) + s[0];
+    }
+}
+
+function power2(num) {
+    var pwr = false;
+
+    do {
+        num = num / 2;
+    } while (num > 1);
+
+    if (num == 1) {
+        pwr = true;
+    }
+
+    return pwr;
+}
 
 function has7(num) {
     var seven = true;
@@ -912,3 +1262,138 @@ function checkUncheck3() {
         document.getElementById("java").style.display = "none";
     }
 }
+
+function zoomIn() {
+    document.getElementById("flowchart").style.width = "200%";
+    document.getElementById("javascript").style.width = "200%";
+}
+
+function zoomOut() {
+    document.getElementById("flowchart").style.width = "100%";
+    document.getElementById("javascript").style.width = "100%";
+}
+
+/*function p41Func() {
+
+  document.getElementById("problem").innerHTML="<p></p>";
+
+    document.getElementById("flowchart").setAttribute("src", "Flowchart/Problem.jpg");
+    document.getElementById("flowchart").style.display="none";
+
+    document.getElementById("js").setAttribute("src", "JavascriptSolution/Problem.jpg");
+    document.getElementById("js").style.display="none";
+    document.getElementById("jsSolution").onclick= function(){
+
+      var a=parseInt(prompt("Please input number: ", ""));
+      
+    
+    }
+
+    document.getElementById("another").setAttribute("src", ".jpg");
+    document.getElementById("another").style.display="none";
+
+    document.getElementById("check1").checked=false;
+    document.getElementById("check2").checked=false;
+    document.getElementById("check3").checked=false;
+
+}
+
+function p42Func() {
+
+  document.getElementById("problem").innerHTML="<p></p>";
+
+    document.getElementById("flowchart").setAttribute("src", "Flowchart/Problem.jpg");
+    document.getElementById("flowchart").style.display="none";
+
+    document.getElementById("js").setAttribute("src", "JavascriptSolution/Problem.jpg");
+    document.getElementById("js").style.display="none";
+    document.getElementById("jsSolution").onclick= function(){
+
+      var a=parseInt(prompt("Please input number: ", ""));
+      
+    
+    }
+
+    document.getElementById("another").setAttribute("src", ".jpg");
+    document.getElementById("another").style.display="none";
+
+    document.getElementById("check1").checked=false;
+    document.getElementById("check2").checked=false;
+    document.getElementById("check3").checked=false;
+
+}
+
+function p43Func() {
+
+  document.getElementById("problem").innerHTML="<p></p>";
+
+    document.getElementById("flowchart").setAttribute("src", "Flowchart/Problem.jpg");
+    document.getElementById("flowchart").style.display="none";
+
+    document.getElementById("js").setAttribute("src", "JavascriptSolution/Problem.jpg");
+    document.getElementById("js").style.display="none";
+    document.getElementById("jsSolution").onclick= function(){
+
+      var a=parseInt(prompt("Please input number: ", ""));
+      
+    
+    }
+
+    document.getElementById("another").setAttribute("src", ".jpg");
+    document.getElementById("another").style.display="none";
+
+    document.getElementById("check1").checked=false;
+    document.getElementById("check2").checked=false;
+    document.getElementById("check3").checked=false;
+
+}
+
+function p44Func() {
+
+  document.getElementById("problem").innerHTML="<p></p>";
+
+    document.getElementById("flowchart").setAttribute("src", "Flowchart/Problem.jpg");
+    document.getElementById("flowchart").style.display="none";
+
+    document.getElementById("js").setAttribute("src", "JavascriptSolution/Problem.jpg");
+    document.getElementById("js").style.display="none";
+    document.getElementById("jsSolution").onclick= function(){
+
+      var a=parseInt(prompt("Please input number: ", ""));
+      
+    
+    }
+
+    document.getElementById("another").setAttribute("src", ".jpg");
+    document.getElementById("another").style.display="none";
+
+    document.getElementById("check1").checked=false;
+    document.getElementById("check2").checked=false;
+    document.getElementById("check3").checked=false;
+
+}
+
+function p45Func() {
+
+  document.getElementById("problem").innerHTML="<p></p>";
+
+    document.getElementById("flowchart").setAttribute("src", "Flowchart/Problem.jpg");
+    document.getElementById("flowchart").style.display="none";
+
+    document.getElementById("js").setAttribute("src", "JavascriptSolution/Problem.jpg");
+    document.getElementById("js").style.display="none";
+    document.getElementById("jsSolution").onclick= function(){
+
+      var a=parseInt(prompt("Please input number: ", ""));
+      
+    
+    }
+
+    document.getElementById("another").setAttribute("src", ".jpg");
+    document.getElementById("another").style.display="none";
+
+    document.getElementById("check1").checked=false;
+    document.getElementById("check2").checked=false;
+    document.getElementById("check3").checked=false;
+
+}*/
