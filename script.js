@@ -750,6 +750,109 @@ function p26Func() {
     setCheckbox();
 }
 
+function p27Func() {
+    document.getElementById("problem").innerHTML = "<p>Receive 2 numbers as the base and height of a triangle. Area of the triangle is outputted.</p>";
+
+    setFlowchart("Flowchart/Problem27.jpg");
+
+    setJs("JavaScriptSolution/Problem27.jpg");
+    document.getElementById("js-answer").onclick = function () {
+        var b = parseInt(prompt("Please input base: ", ""));
+        var h = parseInt(prompt("Please input height: ", ""));
+
+        var area = (1 / 2) * b * h;
+
+        alert("area of triangle: " + area);
+    }
+
+    setJava(".jpg");
+
+    setCheckbox();
+}
+
+function p28Func() {
+    document.getElementById("problem").innerHTML = "<p>There is a list of array containing 10 numbers. In the main algorithm, if the number in that array is a prime number, then it will be outputted, otherwise proceed to the next array number. In the sub-algorithm, if the number inputted is a prime number, then it will return true, otherwise return false.</p>";
+
+    setFlowchart("Flowchart/Problem28.jpg");
+
+    setJs("JavaScriptSolution/Problem28.jpg");
+    document.getElementById("js-answer").onclick = function () {
+        var arrNum = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+        var output2 = [];
+
+        for (i = 0; i < arrNum.length; i = i + 1) {
+            if (prime(arrNum[i]) == true) {
+                output2.push(arrNum[i]);
+            }
+        }
+
+        alert("Prime numbers: " + output2);
+    }
+
+    setJava(".jpg");
+
+    setCheckbox();
+}
+
+function p29Func() {
+    document.getElementById("problem").innerHTML = "<p>Input 10 numbers and store in array. If a[i] is more than the maximum number, therefore it is assigned to the maximum variable, otherwise proceed to the next array numbers until it stops when i is more than the length of the array. Maximum number is outputted.</p>";
+
+    setFlowchart("Flowchart/Problem29.jpg");
+
+    setJs("JavaScriptSolution/Problem29.jpg");
+    document.getElementById("js-answer").onclick = function () {
+        var max = 0;
+        var a = [];
+
+        for (i = 0; i < 10; i++) {
+            var num = parseInt(prompt("Please input 10 numbers: ", ""));
+            a.push(num);
+        }
+
+        for (j = 0; j < a.length; j++) {
+            if (a[j] > max) {
+                max = a[j];
+            }
+        }
+
+        alert("Max number = " + max);
+    }
+
+    setJava(".jpg");
+
+    setCheckbox();
+}
+
+function p30Func() {
+    document.getElementById("problem").innerHTML = "<p>There is a list of array numbers containing 10 numbers. If a[i] is less than the minimum number, it will be assigned to the minimum variable, otherwise proceed to the next array number until it stops when i is more than the length of the array numbers. Minimum number is outputted..</p>";
+
+    setFlowchart("Flowchart/Problem30.jpg");
+
+    setJs("JavaScriptSolution/Problem30.jpg");
+    document.getElementById("js-answer").onclick = function () {
+        var a = [];
+
+        for (i = 0; i < 10; i++) {
+            var num = parseInt(prompt("Please input 10 numbers: ", ""));
+            a.push(num);
+        }
+
+        var min = a[0];
+
+        for (j = 0; j < a.length; j++) {
+            if (a[j] < min) {
+                min = a[j];
+            }
+        }
+
+        alert("Min number = " + min);
+    }
+
+    setJava(".jpg");
+
+    setCheckbox();
+}
+
 
 function has7(num) {
     var seven = true;
